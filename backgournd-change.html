@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background Color Changer</title>
+  <style>
+    body {
+      text-align: center;
+      padding-top: 100px;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.5s ease;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Background Color Changer</h1>
+  <button id="changeBackgroundBtn">Change Background</button>
+
+  <script>
+    const colors = ['#FF6347', '#4682B4', '#90EE90', '#FFA500', '#8A2BE2', '#FFD700'];
+
+    function changeBackground() {
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    }
+
+    const changeBackgroundBtn = document.getElementById('changeBackgroundBtn');
+    changeBackgroundBtn.addEventListener('click', changeBackground);
+  </script>
+</body>
+</html>
